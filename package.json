@@ -1,0 +1,22 @@
+{
+  "name": "npm-viewscripts",
+  "version": "1.0.0",
+  "bin": "cli.js",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://js-kyle@github.com/js-kyle/npm-viewscripts.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/js-kyle/npm-viewscripts/issues"
+  },
+  "homepage": "https://github.com/js-kyle/npm-viewscripts#readme",
+  "dependencies": {
+    "directory-tree": "^2.2.4"
+  }
+}
