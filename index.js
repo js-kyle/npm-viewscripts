@@ -10,6 +10,7 @@ const walkModules = ((path = 'node_modules') => {
 
     if (item.name === 'package.json') {
       let pkg = JSON.parse(fs.readFileSync(item.path, 'utf8'));
+      if (!pkg.scripts) return;
       let scripts = Object.keys(pkg.scripts);
       scripts.forEach((script) => {
         if (scriptTypes.includes(script)) {

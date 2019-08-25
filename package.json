@@ -1,7 +1,10 @@
 {
   "name": "npm-viewscripts",
   "version": "1.0.0",
-  "bin": "cli.js",
+  "bin": {
+    "npm-viewscripts": "cli.js"
+  },
+  "main": "index.js",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +21,6 @@
   "homepage": "https://github.com/js-kyle/npm-viewscripts#readme",
   "dependencies": {
     "directory-tree": "^2.2.4"
-  }
+  },
+  "preferGlobal": true
 }
