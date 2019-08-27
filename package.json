@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://js-kyle@github.com/js-kyle/npm-viewscripts.git"
   },
-  "author": "",
+  "author": "Kyle Martin",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/js-kyle/npm-viewscripts/issues"
