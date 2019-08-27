@@ -5,9 +5,9 @@
     "npm-viewscripts": "cli.js"
   },
   "main": "index.js",
-  "description": "",
+  "description": "View which npm dependencies in a project are using npm scripts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest test/cli.spec.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,9 @@
   "dependencies": {
     "directory-tree": "^2.2.4"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "devDependencies": {
+    "execa": "^2.0.4",
+    "jest": "^24.9.0"
+  }
 }
