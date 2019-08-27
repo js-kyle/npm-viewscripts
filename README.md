@@ -7,7 +7,6 @@
 
 <h4 align="center">Identify potentially malicious npm scripts in a project.</h4>
 <p align="center">
-    <img alt="codeship" src="https://app.codeship.com/projects/02a3d750-aace-0137-5ba8-12b0b953e40b/status?branch=master">
     <img alt="GitHub" src="https://img.shields.io/github/license/js-kyle/npm-viewscripts.svg">
     <img alt="NPM" src="https://img.shields.io/npm/v/npm-viewscripts.svg">
 </p>
