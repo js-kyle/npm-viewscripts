@@ -9,15 +9,17 @@ const walkModules = ((path = 'node_modules') => {
   dirTree(path, {extensions:/\.json$/}, (item) => {
 
     if (item.name === 'package.json') {
-      let pkg = JSON.parse(fs.readFileSync(item.path, 'utf8'));
-      if (!pkg.scripts) return;
-      let scripts = Object.keys(pkg.scripts);
-      scripts.forEach((script) => {
-        if (scriptTypes.includes(script)) {
-          reports.push({name: pkg.name, script: script})
-        }
-      });
-
+      try{
+        let pkg = JSON.parse(fs.readFileSync(item.path, 'utf8'));
+        if (!pkg || !pkg.scripts) return;
+        let scripts = Object.keys(pkg.scripts);
+        scripts.forEach((script) => {
+          if (scriptTypes.includes(script)) {
+            reports.push({ name: pkg.name, script: script, src:item.path })
+          }
+        });
+      catch(e){
+      }
     }
 
   });
@@ -30,7 +32,7 @@ process.on('exit', () => {
   } else {
     console.log('\x1b[31m', 'Potentially unsafe scripts found. These should be reviewed for safety', '\x1b[0m');
     reports.forEach((report) => {
-      console.log(`Module name: ${report.name} Type: ${report.script}`);
+      console.log(`Module name: ${report.name} Type: ${report.script} Src: ${report.src}` );
     });
   }
 
