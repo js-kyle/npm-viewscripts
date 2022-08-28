@@ -29,11 +29,11 @@
   ],
   "homepage": "https://github.com/js-kyle/npm-viewscripts#readme",
   "dependencies": {
-    "directory-tree": "^2.2.4"
+    "directory-tree": "^2.3.1"
   },
   "preferGlobal": true,
   "devDependencies": {
-    "execa": "^2.0.4",
+    "execa": "^2.1.0",
     "jest": "^24.9.0"
   }
 }
